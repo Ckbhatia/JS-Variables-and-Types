@@ -1,4 +1,4 @@
-## What's the outpit of the code below
+1. 🎖 What's the outpit of the code below
 ```js
 typeof "Joe"; "string"
 typeof 4;   "number"
@@ -10,10 +10,11 @@ typeof phone;   "number"
 typeof null;    "object"
 ```
 
-## Output of the code below
+2. 🎖 Output of the code below
 ```js
 // Convert num into string
 var num = 45;
+<<<<<<< HEAD
 String(num); "45"
 String(321); "321"
 String(300 + 23); "323"
@@ -25,4 +26,12 @@ Number(""); 0
 Number("22 44"); NaN
 Number(false);  0
 Number(true); 1
+```
+
+3. 🎖 Output of the following
+
+```js
+var x = 10 + "1";
+console.log(x);
+typeof x;
 ```

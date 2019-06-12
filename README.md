@@ -1,4 +1,4 @@
-# Variables & TYpes
+# Variables & Types
 
 The aim of the exercise is to get started with JavaScript understanding
 * [ ] Varibale defination with (let, var, const).
@@ -35,4 +35,9 @@ The aim of the exercise is to get started with JavaScript understanding
 2. [Data Types](http://javascript.info/types)
 3. [Type Conversions](http://javascript.info/type-conversions)
 4. [Operators](http://javascript.info/operators)
-5. [Interaction: alert, prompt, confirm](http://javascript.info/alert-prompt-confirm)
+5. [Comparisons](http://javascript.info/comparison)
+6. [Interaction: alert, prompt, confirm](http://javascript.info/alert-prompt-confirm)
+7. [Conditional operators: if, '?'](http://javascript.info/ifelse)
+8. [Logical operators](http://javascript.info/logical-operators)
+9. [Loops: while and for](http://javascript.info/while-for)
+10. [The "switch" statement](http://javascript.info/switch)

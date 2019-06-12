@@ -1,4 +1,4 @@
-# Hello World!
+## Hello World!
   1. Make a index.html
   2. Prompt message "Enter You Name"
   3. Store the vlaue in a variable
@@ -8,3 +8,5 @@ Implement it using internal and external JavaScript. Use the two folders with na
 
   1. Write JS inside html file.
   2. Write the JS in an external file and link your html and js.
+
+##
