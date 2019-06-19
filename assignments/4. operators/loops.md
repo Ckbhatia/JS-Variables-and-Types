@@ -14,16 +14,48 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
+for (; PHONE_PRICE <= bank_balance; bank_balance - PHONE_PRICE) {
+    bank_balance = bank_balance - PHONE_PRICE;
+    amount = amount + PHONE_PRICE;
+
+    for (; ACCESSORY_PRICE <= SPENDING_THRESHOLD; bank_balance - ACCESSORY_PRICE) {
+        bank_balance = bank_balance - ACCESSORY_PRICE;
+        amount = amount + ACCESSORY_PRICE;
+        break;
+    }
+}
+// Calculate tax function
+let total = 0;
+let calculateTax = (amount) => {
+    total = amount * TAX_RATE;
+    return total;
+}
+
+// Formate amount function
+let formatAmount = (amount) => `$${amount.toFixed(2)}`;
+
+// Check amount against account bal
+let permission = (total <= bank_balance) ? 'Yes, you can buy it' : 'You don\'t have enough money in your account'; 
 ```
  ⛑ Answer of the above will `$334.76`.
 
 2. 🎖 Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen using `alert` (e.g. "2 is even").
 ```js
 // your code goes here
+for ( let num = 1; num <= 20; ++num ) {
+    if ( num % 2 == 0) {
+        alert(`${num} is even`);
+    }
+}
+
 ```
-
 3. 🎖Write a for loop that will iterate from 0 to 10. For each iteration of the for loop, it will multiply the number by 9 and log the result in console (e.g. "2 * 9 = 18").
+```js
+for (let i = 1; i <= 10; i++) {
+    console.log(`${i * 9}`);
+}
 
+```
 4. 🎖Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
 (e.g.
 "1 * 1 = 1"
@@ -32,20 +64,44 @@ var amount = 0;
 "1 * 4 = 4"
 .... for all 100 results)
 
+```js
+    for (let r = 1; r <= 10; r++ ) {
+        for (let p = 1; p <= 10; p++) {
+            console.log(`${r} * ${p} = ${r*p}`);
+        }
+    }
+```
+
 5. 🎖Show the following output using one loop.
 ```js
 // 1, 2, 3, 4, 5
 // 6, 7, 8, 9, 10
 
 // Your code goes here
+for (let k = 1; k <= 10; k++) {
+    console.log(k);
+}
 ```
 
 6. 🎖Use a while loop to add up the numbers 1 to 20.
 ```js
 // Your code goes here
+let num = 0;
+let start = 0;
+while ( start < 20) {
+    num = ++num;
+    ++ start;
+}
 ```
 
 7. 🎖Use a while loop to print out the even number from 1 to 20. (You'll need Modulus for this. And an IF Statement.)
 ```js
 // Your code goes here
+    let num = 1;
+    while ( num <= 20 ) {
+        if ( num % 2 == 0) {
+            console.log(num);
+        }
+        ++num;
+    }
 ```
