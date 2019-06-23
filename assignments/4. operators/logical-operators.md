@@ -64,5 +64,5 @@ temperature > 32 && temperature < 110 && alert("Go for it")
 
 4. 🎖 Output of this
 ```js
-alert( alert(1) || 2 || alert(3) ); // undefined
+alert( alert(1) || 2 || alert(3) ); // 1 2
 ```

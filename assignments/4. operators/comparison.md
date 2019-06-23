@@ -36,7 +36,7 @@ null == "null" // false
 
 undefined == "undefined" // false
 
-undefined == 0 // true
+undefined == 0 // false
 
 undefined == false  // false
 

@@ -14,28 +14,25 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-for (; PHONE_PRICE <= bank_balance; bank_balance - PHONE_PRICE) {
-    bank_balance = bank_balance - PHONE_PRICE;
-    amount = amount + PHONE_PRICE;
-
-    for (; ACCESSORY_PRICE <= SPENDING_THRESHOLD; bank_balance - ACCESSORY_PRICE) {
-        bank_balance = bank_balance - ACCESSORY_PRICE;
-        amount = amount + ACCESSORY_PRICE;
-        break;
-    }
+while ( amount <= bank_balance) {
+        amount += PHONE_PRICE;
+        while(amount <= SPENDING_THRESHOLD) {
+            amount += ACCESSORY_PRICE;
+        }
 }
 // Calculate tax function
-let total = 0;
-let calculateTax = (amount) => {
+let calculateTax = () => {
+    let total = 0;
     total = amount * TAX_RATE;
-    return total;
+    amount = total + amount;
+    return amount;
 }
 
 // Formate amount function
-let formatAmount = (amount) => `$${amount.toFixed(2)}`;
+let formatAmount = () => `$ ${amount.toFixed(2)}`;
 
 // Check amount against account bal
-let permission = (total <= bank_balance) ? 'Yes, you can buy it' : 'You don\'t have enough money in your account'; 
+let checkPermission = (amount <= bank_balance) ? 'Yes, you can buy it' : 'You don\'t have enough money in your account'; 
 ```
  ⛑ Answer of the above will `$334.76`.
 
@@ -46,13 +43,16 @@ for ( let num = 1; num <= 20; ++num ) {
     if ( num % 2 == 0) {
         alert(`${num} is even`);
     }
+    else {
+        alert(`${num} is odd`)
+    }
 }
 
 ```
 3. 🎖Write a for loop that will iterate from 0 to 10. For each iteration of the for loop, it will multiply the number by 9 and log the result in console (e.g. "2 * 9 = 18").
 ```js
 for (let i = 1; i <= 10; i++) {
-    console.log(`${i * 9}`);
+    console.log(`${i} * 9 = ${i * 9}`);
 }
 
 ```
@@ -78,30 +78,42 @@ for (let i = 1; i <= 10; i++) {
 // 6, 7, 8, 9, 10
 
 // Your code goes here
+let str = "";
+let str2 = "";
 for (let k = 1; k <= 10; k++) {
-    console.log(k);
+	if (k > 5) {
+	str2 = str2 + " " + k;
+    }
+	else {
+	str = str +" " + k;
+    }
 }
+console.log(str);
+console.log(str2);
 ```
 
 6. 🎖Use a while loop to add up the numbers 1 to 20.
 ```js
 // Your code goes here
 let num = 0;
+let sum = 0;
 let start = 0;
 while ( start < 20) {
     num = ++num;
+    sum += num;
     ++ start;
 }
+console.log(sum);
 ```
 
 7. 🎖Use a while loop to print out the even number from 1 to 20. (You'll need Modulus for this. And an IF Statement.)
 ```js
 // Your code goes here
-    let num = 1;
-    while ( num <= 20 ) {
-        if ( num % 2 == 0) {
-            console.log(num);
-        }
-        ++num;
+let num = 1;
+while ( num < 20 ) {
+    if ( num % 2 == 0) {
+        console.log(num);
     }
+    ++num;
+}
 ```
