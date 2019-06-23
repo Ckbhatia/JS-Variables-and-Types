@@ -14,7 +14,6 @@ typeof null;    "object"
 ```js
 // Convert num into string
 var num = 45;
-<<<<<<< HEAD
 String(num); "45"
 String(321); "321"
 String(300 + 23); "323"

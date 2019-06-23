@@ -8,23 +8,92 @@
     * [ ] Sub
     * [ ] Mul
     * [ ] Div
+```js
+let inputFirst = prompt('Enter a number');
+let inputTwo = prompt('Enter an another number');
+let numFirst = Number(inputFirst);
+let numTwo = Number(inputTwo);
+let result;
+  if ( numFirst > numTwo) {
+      let inputThird = prompt("Write operation type's short word that you want,EX: Add, Sub, Mul Or Div");
+      if (inputThird === 'Add') {
+          result = numFirst + numTwo;
+      }
+      else if (inputThird === 'Sub') {
+          result = numFirst - numTwo;
+      }
+      else if (inputThird === 'Mul') {
+          result = numFirst * numTwo;
+      }
+      else if (inputThird === 'Div') {
+          result = numFirst / numTwo;
+      }
+      else {
+          alert('Please check operation type again');
+      }
+    }
+  else {
+	  alert('Number Two is larger than Number one');	
+  }
+console.log(result);
+```
+
 
 2. 🎖Write a if else statement which checks if the status is single `console.log` the message `John is single` or else `John is married`
 ```js
 var firstName = 'John';
 var status = 'single';
 // Your code goes here
+if(status == 'single') {
+  console.log(`${firstName} is ${status}`);
+}
+else {
+  console.log(`${firstName} is married`);
+}
 ```
 
 3. 🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 ```js
-// your code goes here
+let userInput1 = prompt("Enter a interger");
+let userInput2 = prompt("Enter an another interger");
+
+if (userInput1 > userInput2) {
+  alert(userInput1);
+}
+else {
+  alert(userInput2);
+}
+
 ```
 
 4. 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 
 ```js
 // Your code goes here
+let userInputFirst = prompt('Enter a number');
+let userInputTwo = prompt('Enter an another number');
+let userInputThird = prompt('Enter an another number, last time');
+  if (userInputFirst < 0) {
+    alert('-');
+  }
+  else if (userInputTwo < 0) {
+    alert('-');
+  }
+  else if (userInputThird < 0) {
+    alert('-');
+  }
+  else if (userInputFirst > 0) {
+    alert('+');
+  }
+  else if (userInputTwo > 0) {
+    alert('+');
+  }
+  else if (userInputThird > 0) {
+    alert('+');
+  }
+  else {
+    alert('Unknown');
+  }
 ```
 
 ## Switch Statement
@@ -44,6 +113,39 @@ Take a number value from user and alert the message if it matches the conditions
 * [ ] PLEASE TRY AGAIN, if  is none of the above.
 ```js
 // Your code goes here
+  let numString = prompt("Enter a number");
+  let toNum = Number(numString);
+  switch(toNum) {
+    case 1:
+      alert("ONE");
+      break;
+    case 2:
+      alert("TWO");
+      break;
+    case 3:
+      alert("THREE");
+      break;
+    case 4:
+      alert("FOUR");
+      break;
+    case 5:
+      alert("FIVE");
+      break;
+    case 6:
+      alert("SIX");
+      break;
+    case 7:
+      alert("SEVEN");
+      break;
+    case 8:
+      alert("EIGHT");
+      break;
+    case 9:
+      alert("TEN");
+      break;
+    default:
+      alert("PLEASE TRY AGAIN");
+  }
 ```
 
 2. 🎖Using switch statement do the following
@@ -59,4 +161,34 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 * [ ] `FF` if `marks` is less than or equal to 30
 ```js
 // Your code goes here
+let numString = prompt("Enter a number");
+  let toNum = Number(numString);
+  switch(toNum) {
+    case (toNum > 90 ? toNum : 0):
+      alert("AA");
+      break;
+    case (toNum > 80 && toNum <= 90 ? toNum : 0):
+      alert("AB");
+      break;
+    case (toNum > 70 && toNum <= 80 ? toNum : 0):
+      alert("BB");
+      break;
+    case (toNum > 60 && toNum <= 70 ? toNum : 0):
+      alert("BC");
+      break;
+    case (toNum > 50 && toNum <= 60 ? toNum : 0):
+      alert("CC");
+      break;
+    case (toNum > 40 && toNum <= 50 ? toNum : 0):
+      alert("CD");
+      break;
+    case (toNum > 30 && toNum <= 40 ? toNum : 0):
+      alert("DD");
+      break;
+    case (toNum > 30 || toNum <= 30 ? toNum : 0):
+      alert("FF");
+      break;
+    default:
+      alert("You should enter a number between 0 to 100");
+  }
 ```
